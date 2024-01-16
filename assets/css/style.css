@@ -126,7 +126,12 @@ Global Styles
 
   /* linegridient  */
 }
-
+.commen-input {
+  border: none;
+   padding: 1rem;
+   background-color: #F2F2F2;
+ }
+ 
 input {
   border: none;
   outline: none;
