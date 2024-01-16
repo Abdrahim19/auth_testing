@@ -102,7 +102,6 @@ const sendData = async () => {
       successMessage.removeAttribute('hidden');
       successMessage.innerHTML = 'تم التسجيل بنجاح! شكرًا لك على التسجيل.';
       form.reset();
-      window.location.reload()
     }
   } catch (error) {
     console.error('Error saving form data:', error);

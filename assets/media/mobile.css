@@ -1,6 +1,6 @@
-@media (min-width:768px) {
+@media (min-width:576px) {
 }
-@media (max-width:768px) {
+@media (max-width:576px) {
     .auth_box .auth_note {
         margin-block: 8.25rem 5.69rem;
       }
@@ -8,4 +8,12 @@
         width: 12.8125rem;
         height: 12.8125rem;
       }
+      .commen-input {
+        height: 1.875rem;
+      }
+      .img_container {
+        width: 80%;
+        margin-inline: auto;
+        margin-top: 2rem;
+    }
 }
