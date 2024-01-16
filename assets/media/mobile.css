@@ -1,4 +1,7 @@
 @media (min-width:576px) {
+  .input_two_col {
+    gap: 1.31rem;
+  }
 }
 @media (max-width:576px) {
     .auth_box .auth_note {
