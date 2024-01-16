@@ -1,24 +1,20 @@
 @media (max-width:992px) {
-    .img_container {
-        width: 80%;
-        margin-inline: auto;
-        margin-top: 2rem;
-    }
     .auth_box {
         padding-block: 1.06rem 5.56rem;
       }
       .commen-input {
         height: 2.875rem;
       }
+        .img_container {
+            width: 80%;
+            margin-inline: auto;
+            margin-top: 2rem;
+        }
 }
 
 @media (min-width:992px) {
     .auth_box {
         width: 35%;
-}
-.img_container {
-    width: 100%;
-    height: 100%;
 }
         .auth_box .auth_note {
             margin-block: 10.25rem 7.69rem;
@@ -26,4 +22,8 @@
           .commen-input {
             height: 3.875rem;
           }
+          .img_container {
+            width: 100%;
+            height: 100%;
+        }
 }

@@ -160,6 +160,7 @@ filter: drop-shadow(-9px 0px 33.5px rgba(0, 0, 0, 0.15));
 .auth_box .auth_logo {
   width: 14.8125rem;
   height: 14.8125rem;
+  margin-bottom: 2.5rem;
   flex-shrink: 0;
 }
 .auth_box .auth_note p {
