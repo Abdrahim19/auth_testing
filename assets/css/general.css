@@ -1,0 +1,8 @@
+.flex-1 {
+    flex: 1;
+  }
+  .commen-input {
+    height: 3.875rem;
+    padding: 1rem;
+    background-color: #F2F2F2;
+  }

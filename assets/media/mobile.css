@@ -1,0 +1,11 @@
+@media (min-width:768px) {
+}
+@media (max-width:768px) {
+    .auth_box .auth_note {
+        margin-block: 8.25rem 5.69rem;
+      }
+      .auth_box .auth_logo {
+        width: 12.8125rem;
+        height: 12.8125rem;
+      }
+}
