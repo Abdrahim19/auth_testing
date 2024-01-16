@@ -155,6 +155,7 @@ filter: drop-shadow(-9px 0px 33.5px rgba(0, 0, 0, 0.15));
 .auth_box {
   width: 90%;
   margin: auto;
+  padding-block: 2.06rem 6.56rem;
 }
 .auth_box .auth_logo {
   width: 14.8125rem;
