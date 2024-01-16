@@ -19,13 +19,9 @@ const setErrorMessage = (message) => {
   };
   
   function validateForm() {
-    const fullName = document.getElementById('fullName');
-    const email = document.getElementById('adders');
-    const phoneNumber = document.getElementById('PhoneNumber');
-    
     const formvalues = {
     fullName: document.getElementById('fullName').value,
-    adders: document.getElementById('adders').value,
+    email: document.getElementById('adders').value,
     phoneNumber: document.getElementById('PhoneNumber').value
     }
 
@@ -39,6 +35,10 @@ const setErrorMessage = (message) => {
   
     // Arabic text regular expression
     const arabicRegex = /[\u0600-\u06FF\s]/;
+
+      // Email regular expression
+  const emailRegex = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/;
+
   
     // Phone number regular expression
     const phoneNumberRegex = /^\d{10}$/;
@@ -54,11 +54,16 @@ const setErrorMessage = (message) => {
       return;
     }
   
-    if (formvalues.adders === '') {
+    if (formvalues.email === '') {
       setErrorMessage('الرجاء إدخال عنوان البريد الإلكتروني.');
       return;
     }
   
+    if (!emailRegex.test(formvalues.email)) {
+      setErrorMessage('الرجاء إدخال عنوان بريد إلكتروني صحيح.');
+      return;
+    }
+
   
     if (formvalues.phoneNumber === '') {
       setErrorMessage('الرجاء إدخال رقم الهاتف.');
