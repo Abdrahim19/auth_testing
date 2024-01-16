@@ -19,10 +19,16 @@ const setErrorMessage = (message) => {
   };
   
   function validateForm() {
-    const fullName = document.getElementById('fullName').value;
-    const email = document.getElementById('adders').value;
-    const phoneNumber = document.getElementById('PhoneNumber').value;
-  
+    const fullName = document.getElementById('fullName');
+    const email = document.getElementById('adders');
+    const phoneNumber = document.getElementById('PhoneNumber');
+    
+    const formvalues = {
+    fullName: document.getElementById('fullName').value,
+    adders: document.getElementById('adders').value,
+    phoneNumber: document.getElementById('PhoneNumber').value
+    }
+
     const successMessage = document.getElementById('successMessage');
   
     // Clear any previous error or success messages
@@ -34,35 +40,32 @@ const setErrorMessage = (message) => {
     // Arabic text regular expression
     const arabicRegex = /[\u0600-\u06FF\s]/;
   
-    // Email regular expression
-    const emailRegex = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/;
-  
     // Phone number regular expression
     const phoneNumberRegex = /^\d{10}$/;
   
     // Perform validation checks
-    if (fullName === '') {
+    if (formvalues.fullName === '') {
       setErrorMessage('الرجاء إدخال الاسم الكامل.');
       return;
     }
   
-    if (!arabicRegex.test(fullName)) {
+    if (!arabicRegex.test(formvalues.fullName)) {
       setErrorMessage('الرجاء إدخال اسم صالح باللغة العربية.');
       return;
     }
   
-    if (email === '') {
+    if (formvalues.adders === '') {
       setErrorMessage('الرجاء إدخال عنوان البريد الإلكتروني.');
       return;
     }
   
   
-    if (phoneNumber === '') {
+    if (formvalues.phoneNumber === '') {
       setErrorMessage('الرجاء إدخال رقم الهاتف.');
       return;
     }
   
-    if (!phoneNumberRegex.test(phoneNumber)) {
+    if (!phoneNumberRegex.test(formvalues.phoneNumber)) {
       setErrorMessage('الرجاء إدخال رقم هاتف صحيح مكون من 10 أرقام.');
       return;
     }
