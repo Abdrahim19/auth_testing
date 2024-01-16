@@ -27,3 +27,9 @@
             height: 100%;
         }
 }
+
+@media screen and (min-width: 993px) and (max-width: 1600px) {
+    .auth_box {
+        width: 40%;
+    }
+}
