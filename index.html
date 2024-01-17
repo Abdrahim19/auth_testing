@@ -24,26 +24,22 @@
 
     <script defer type="module" src="./assets/js/script.js"></script>
 
-
-
-<!--
-
-TemplateMo 591 villa agency
-
-https://templatemo.com/tm-591-villa-agency
-
--->
   </head>
   <body>
+    <div id="loading-page" class="position-fixed loading-page  top-0 w-100 h-100 d-grid bg-black opacity-75 z-3 " >
+      <div class="spinner-border text-primary" role="status">
+      </div>
+    </div>
     <div class="row bg-white min-vh-100">
-      <div class="col-lg-6">
-        <div class="img_container">
-          <img  src="./assets/images/rm246batch2 ps75 adj 05 3.png" class="img-fluid h-100 w-100 main_img" alt="">
+      <div class="col-md-6">
+        <div class="img_container"
+         style="filter: drop-shadow(-9px 0px 33.5px rgba(0, 0, 0, 0.15));">
+          <img  src="./assets/images/rm246batch2 ps75 adj 05 3.png" class="w-100 h-100 object-fit-fill" alt="">
         </div>
       </div>
-      <form id="singup_auth" method="post"  class="col-lg-6 auth_box ">
+      <form id="singup_auth" method="post"  class="col-md-6 auth_box ">
         <div class="w-100 text-center">
-          <img src="./assets/images/PHOTO DE PROFIL_BLACK 1 (1).png" class="auth_logo" alt="">
+          <img src="./assets/images/PHOTO DE PROFIL_BLACK 1.png" class="auth_logo" alt="">
         </div>
         <div class="mb-3 col">
           <label class="form-label" for="firstName">الإسم كاملا</label>
@@ -69,7 +65,7 @@ https://templatemo.com/tm-591-villa-agency
         <p class="auth_note">بعد التسجيل سيتم الإتصال بك من طرف فريقنا </p>
       </div>
 
-      <button id="submitButton" type="submit" class="submit_button">تسجيل</button>
+      <button id="submitButton"  type="submit" class="submit_button">تسجيل</button>
 
 
       </form>

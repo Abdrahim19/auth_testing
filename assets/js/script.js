@@ -1,8 +1,11 @@
 // Get the form and submit button elements
 const form = document.getElementById('singup_auth');
 const submitButton = document.getElementById('submitButton');
-const errorMessage = document.getElementById('errorMessage');
 const successMessage = document.getElementById('successMessage');
+const loading_page = document.getElementById('loading-page') 
+
+console.log(submitButton);
+
 
 // Add event listener to the submit button
 submitButton.addEventListener('click', function(event) {
@@ -98,6 +101,10 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
 const sendData = async () => {
+  loading_page.classList.add('active');
+  submitButton.setAttribute('disabled' , true)
+  loading_page.classList.add('active');
+
   try {
     const docRef = await addDoc(collection(db, "users"), {
     fullName: document.getElementById('fullName').value,
@@ -107,8 +114,11 @@ const sendData = async () => {
 
     if (docRef) {
       console.log('Form data saved with ID:', docRef.id);
+  loading_page.classList.remove('active');
       successMessage.removeAttribute('hidden');
       successMessage.innerHTML = 'تم التسجيل بنجاح! شكرًا لك على التسجيل.';
+  submitButton.removeAttribute('disabled')
+
       form.reset();
     }
   } catch (error) {
