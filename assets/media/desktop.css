@@ -13,6 +13,11 @@
           }
          
 }
+@media (min-width:768px) {
+  .two_col_responsive {
+    grid-template-columns: repeat(2 , 1fr);
+  }
+}
 
 @media (min-width:768px) and (max-width:1261px) {
   .auth_container {
@@ -22,7 +27,5 @@
   .commen-input {
     height: 1.875rem;
   }
-  .two_col_responsive {
-    grid-template-columns: repeat(2 , 1fr);
-  }
+ 
 }
