@@ -182,19 +182,25 @@ font-style: normal;
 font-weight: 400;
 line-height: normal;
 }
-.auth_box .submit_button {
-  color: #FFF;
-  margin-inline: auto;
-font-size: 1.125rem;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-width:80%;
+.btn {
+  width:80%;
 height: 3.875rem;
 display: grid;
 place-items: center;
+} 
+.btn-primary {
+  font-size: 1.125rem;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
 background-color: #313131;
+color: #FFF;
+border: none;
+&:hover {
+  background-color:#3131312c ;
 }
+}
+
 
 .img_container {
   width: 100%;

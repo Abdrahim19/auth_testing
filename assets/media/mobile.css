@@ -14,5 +14,8 @@
       .commen-input {
         height: 1.875rem;
       }
+      .btn-primary {
+        width: 90%;
+      }
     
 }
