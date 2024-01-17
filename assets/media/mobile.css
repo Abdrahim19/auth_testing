@@ -29,8 +29,8 @@
     max-height: 6.8125rem;
 }
 .img_container {
-  width: 100%;
-  min-height:40%;
+  width: 70%;
+  min-height: 40%;
   margin-inline: auto;
 }
 .auth_box {
