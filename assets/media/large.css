@@ -1,10 +1,15 @@
-@media screen and (min-width:1601px) {
-    .auth_box .auth_note {
-        margin-block: 12.25rem 9.69rem;
-      }
+@media screen and (min-width:1300px) {
+  .auth_container {
+    max-width: 75%;
+    min-height: 75%;
+   }
+ .auth_img {
+  margin-right: -1rem;
+ }
 }
-@media screen and (max-width:1601px) {
-  .auth_box .auth_note {
-      margin-block: 5.25rem 3.69rem;
-    }
+
+@media screen and (max-width:1300px) {
+.auth_img {
+  margin-right: -2rem;
+ }
 }

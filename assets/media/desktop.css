@@ -1,29 +1,25 @@
 @media (max-width:992px) {
-    .auth_box {
-        padding-block: 1.06rem 5.56rem;
-      }
       .commen-input {
         height: 2.875rem;
       }  
+      .auth_box {
+        width: 50%;
+      }
 }
 
 @media (min-width:992px) {
-        .auth_box .auth_note {
-            margin-block: 10.25rem 7.69rem;
-          }
           .commen-input {
             height: 3.875rem;
           }
          
 }
 
-@media (max-width:768px) {
-  .img_container {
-    width: 80%;
-    margin-inline: auto;
-    margin-top: 2rem;
-}
-.auth_box {
-  width: 70%;
-}
+@media (min-width:768px) and (max-width:1261px) {
+  .auth_container {
+    width: 85%;
+    height:95%;
+  }
+  .commen-input {
+    height: 1.875rem;
+  }
 }

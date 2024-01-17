@@ -127,8 +127,10 @@ Global Styles
 
   /* linegridient  */
 }
+
 .loading-page {
-  left:-999rem; place-items: center;
+  left:-999rem;
+   place-items: center;
 }
 .loading-page.active {
   left: 0;
@@ -156,6 +158,13 @@ textarea {
   resize: none;
 }
 
+.h-screen {
+  height: 100vh;
+}
+.place-items-center {
+  place-items:  center;
+}
+
 .form-label {
   color:var(--clr-label);
 font-size: 1.125rem;
@@ -163,17 +172,21 @@ font-style: normal;
 font-weight: 400;
 line-height: normal;
 }
+.auth_container {
+  filter: drop-shadow(-9px 0px 33.5px rgba(0, 0, 0, 0.15)); 
+  border-radius: 1rem 0 0 1rem;
+}
+
+.auth_container .auth_img {
+  filter: drop-shadow(-9px 0px 33.5px rgba(0, 0, 0, 0.15));
+}
 
 .auth_box {
   width: 40%;
-  margin: auto;
-  padding-block: 2.06rem 6.56rem;
+  margin-inline: auto;
 }
 .auth_box .auth_logo {
-  width: 14.8125rem;
-  height: 14.8125rem;
-  margin-bottom: 2.5rem;
-  flex-shrink: 0;
+  max-height: 8.8125rem;
 }
 .auth_box .auth_note p {
   color: #000;
@@ -181,10 +194,11 @@ font-size: 1.125rem;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
+margin-bottom: 1rem;
 }
 .btn {
   width:80%;
-height: 3.875rem;
+height: clamp(  2.875rem ,4vw ,3.875rem );
 display: grid;
 place-items: center;
 } 
@@ -200,9 +214,4 @@ border: none;
   background-color:#3131312c ;
 }
 }
-
-
-.img_container {
-  width: 100%;
-  height: 100%;
-}
+ 
