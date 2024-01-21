@@ -159,7 +159,7 @@ textarea {
 }
 
 .h-screen {
-  height: 100vh;
+  height: 100svh;
 }
 .place-items-center {
   place-items:  center;
