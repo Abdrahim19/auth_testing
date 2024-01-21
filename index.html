@@ -25,17 +25,18 @@
     <script defer type="module" src="./assets/js/script.js"></script>
 
   </head>
-  <body class="d-grid h-screen place-items-center ">
+  <body>
     <div id="loading-page" class="position-fixed loading-page  top-0 w-100 h-100 d-grid bg-black opacity-75 z-3 " >
       <div class="spinner-border text-primary" role="status">
       </div>
     </div>
+    <div class="h-screen container d-grid" style="place-items:center;">
       <div
-      class="two_col_responsive d-grid py-4 py-md-0  auth_container bg-white " >
-        <div class="img_container">
-          <img  src="./assets/images/auth_img.png" 
-          class="object-fit-fill w-100 h-100 " alt="">
-        </div>
+      class="two_col_responsive d-grid bg-white auth_container py-4 py-md-0" >
+      <div class="img_container">
+        <img  src="./assets/images/auth_img.png" 
+        class="object-fit-fill img-fluid mx-auto h-100" alt="">
+      </div>
         <form id="singup_auth" method="post"  class="d-sm-flex flex-column justify-content-around auth_box ">
           <div>
             <div class="w-100 text-center">
@@ -70,6 +71,7 @@
   
         </form>
       </div>
+    </div>
     
 
   </body>

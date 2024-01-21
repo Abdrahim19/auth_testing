@@ -20,10 +20,6 @@
 }
 
 @media (min-width:768px) and (max-width:1261px) {
-  .auth_container {
-    width: 85%;
-    min-height:95%;
-  }
   .commen-input {
     height: 1.875rem;
   }
