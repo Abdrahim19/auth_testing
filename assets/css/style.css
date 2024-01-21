@@ -182,7 +182,7 @@ line-height: normal;
 }
 
 .auth_box {
-  width: 80%;
+  max-width: 70%;
   margin-inline: auto;
 }
 .auth_box .auth_logo {
