@@ -167,7 +167,7 @@ textarea {
 
 .form-label {
   color:var(--clr-label);
-font-size: 1.125rem;
+font-size: 1rem;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
@@ -177,7 +177,7 @@ line-height: normal;
   border-radius: 1rem 0 0 1rem;
 }
 
-.auth_container .auth_img {
+.auth_container .img_container {
   filter: drop-shadow(-9px 0px 33.5px rgba(0, 0, 0, 0.15));
 }
 
@@ -211,7 +211,7 @@ background-color: #313131;
 color: #FFF;
 border: none;
 &:hover {
-  background-color:#3131312c ;
+  background-color:#272525 ;
 }
 }
  

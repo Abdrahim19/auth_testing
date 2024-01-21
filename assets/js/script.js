@@ -1,3 +1,22 @@
+  // firbase 
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+  import { getFirestore } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+ import { addDoc, collection } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyDpiGtg_mnIE_id_-Bv43FO-VsUCZMrPRs",
+    authDomain: "chatauth-151ca.firebaseapp.com",
+    projectId: "chatauth-151ca",
+    storageBucket: "chatauth-151ca.appspot.com",
+    messagingSenderId: "484046494549",
+    appId: "1:484046494549:web:4ae4f3e3711795b5166ddc"
+  };
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
 // Get the form and submit button elements
 const form = document.getElementById('singup_auth');
 const submitButton = document.getElementById('submitButton');
@@ -80,49 +99,30 @@ const setErrorMessage = (message) => {
     sendData()
   }
 
-  // firbase 
-
- 
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-  import { getFirestore } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
-  import { addDoc, collection } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
-
-  const firebaseConfig = {
-    apiKey: "AIzaSyDpiGtg_mnIE_id_-Bv43FO-VsUCZMrPRs",
-    authDomain: "chatauth-151ca.firebaseapp.com",
-    projectId: "chatauth-151ca",
-    storageBucket: "chatauth-151ca.appspot.com",
-    messagingSenderId: "484046494549",
-    appId: "1:484046494549:web:4ae4f3e3711795b5166ddc"
+  const sendData = async () => {
+    loading_page.classList.add('active');
+    submitButton.setAttribute('disabled' , true)
+    loading_page.classList.add('active');
+  
+    try {
+      const docRef = await addDoc(collection(db, "users"), {
+      fullName: document.getElementById('fullName').value,
+      email: document.getElementById('adders').value,
+      phoneNumber: document.getElementById('PhoneNumber').value
+      });
+  
+      if (docRef) {
+        console.log('Form data saved with ID:', docRef.id);
+    loading_page.classList.remove('active');
+        successMessage.removeAttribute('hidden');
+        successMessage.innerHTML = 'تم التسجيل بنجاح! شكرًا لك على التسجيل.';
+    submitButton.removeAttribute('disabled')
+  
+        form.reset();
+      }
+    } catch (error) {
+      console.error('Error saving form data:', error);
+      alert('حدث خطأ أثناء حفظ بيانات النموذج.');
+    }
   };
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
-
-const sendData = async () => {
-  loading_page.classList.add('active');
-  submitButton.setAttribute('disabled' , true)
-  loading_page.classList.add('active');
-
-  try {
-    const docRef = await addDoc(collection(db, "users"), {
-    fullName: document.getElementById('fullName').value,
-    email: document.getElementById('adders').value,
-    phoneNumber: document.getElementById('PhoneNumber').value
-    });
-
-    if (docRef) {
-      console.log('Form data saved with ID:', docRef.id);
-  loading_page.classList.remove('active');
-      successMessage.removeAttribute('hidden');
-      successMessage.innerHTML = 'تم التسجيل بنجاح! شكرًا لك على التسجيل.';
-  submitButton.removeAttribute('disabled')
-
-      form.reset();
-    }
-  } catch (error) {
-    console.error('Error saving form data:', error);
-    alert('حدث خطأ أثناء حفظ بيانات النموذج.');
-  }
-};

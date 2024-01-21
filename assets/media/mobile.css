@@ -22,7 +22,6 @@
 }
 .img_container {
   width: 70%;
-  min-height: 40%;
   margin-inline: auto;
 }
 .auth_box {
@@ -31,5 +30,6 @@ background-color: transparent;
 }
 .auth_container {
   border-radius: 0 !important;
+  width: 100%;
 }
 }
