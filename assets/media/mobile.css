@@ -35,4 +35,9 @@ background-color: transparent;
   width: 100%;
   height: 100%;
 }
+.alert-danger {
+  position: fixed;
+  left: 0;
+  top: 40%;
+}
 }
